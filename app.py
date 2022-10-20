@@ -4,7 +4,7 @@ import os
 import glob
 import re
 
-# import parse
+import parse
 import pdfplumber
 from datetime import datetime
 import streamlit as st
