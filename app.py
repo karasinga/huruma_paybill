@@ -424,13 +424,13 @@ if uploaded_file is not None:
         trends = dfs.groupby(['type', 'month', 'month_']).sum()['Paid In'].reset_index().sort_values('month')
 
         trend_charts(trends)
-    with st.expander("CLEAR CACHE"):
-        analyze_button = st.button('Clear cache', on_click=None)
-        if analyze_button == True:
-            # if table_of_contents == "Clear all cache":
-            # clear the content of a data folder
-            files = glob.glob('data/*')
-            for f in files:
-                os.remove(f)
-            # clear cache
-            st.experimental_memo.clear()
+    # with st.expander("CLEAR CACHE"):
+    #     analyze_button = st.button('Clear cache', on_click=None)
+    #     if analyze_button == True:
+    #         # if table_of_contents == "Clear all cache":
+    #         # clear the content of a data folder
+    #         files = glob.glob('data/*')
+    #         for f in files:
+    #             os.remove(f)
+    #         # clear cache
+    #         st.experimental_memo.clear()
