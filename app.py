@@ -397,6 +397,7 @@ if uploaded_file is not None:
 
         fig = px.pie(trends, values='Paid In', names='type', title='Distribution of cash received',
                      )
+
         fig.update_traces(textposition='inside', textinfo='percent+label')
         fig.update_layout(
             height=550,
